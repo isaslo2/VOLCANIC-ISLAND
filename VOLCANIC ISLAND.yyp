@@ -34,6 +34,12 @@
     "IDEVersion": "2023.8.2.106",
   },
   "resources": [
+    {"id":{"name":"oWall","path":"objects/oWall/oWall.yy",},},
+    {"id":{"name":"oManager","path":"objects/oManager/oManager.yy",},},
+    {"id":{"name":"Note1","path":"notes/Note1/Note1.yy",},},
+    {"id":{"name":"sPlayer","path":"sprites/sPlayer/sPlayer.yy",},},
+    {"id":{"name":"sWall","path":"sprites/sWall/sWall.yy",},},
+    {"id":{"name":"oPlayer","path":"objects/oPlayer/oPlayer.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
   ],
   "RoomOrderNodes": [
