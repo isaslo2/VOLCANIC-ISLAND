@@ -1,72 +1,74 @@
-// thanks to Blobfish for some of the movement code
-// TODO: add a way to switch between WASD and arrow keys
+// controls
+keyUp = keyboard_check(ord("W"));
+keyDown = keyboard_check(ord("S"));
+keyRight = keyboard_check(ord("D"));
+keyLeft = keyboard_check(ord("A"));
 
-var _x_direction = keyboard_check(ord("D")) - keyboard_check(ord("A"));
-var _jump = keyboard_check_pressed(ord("W"))
-var _wall_collision = place_meeting(x, y + 1, oWall)
+var _jump = keyUp
 
-// movement
-ySpeed += (grav / 100); // GRAVITY STRENGTH (change gravb variable in Create event)
+// calculate horizontal movement
+var _h_move = keyRight - keyLeft;
 
-// collision
-if (_wall_collision)
+// calculate acceleration
+if _h_move != 0
 {
-	// if (xDirection != 0)
-	// {
-		// sprite_index = {moving sprite}
-	// }
-	// else
-	// {
-		// sprite_index = {idle sprite}
-	// }
-	
-	// jump
-	if (_jump)
+	if lastPos != _h_move
 	{
-		ySpeed = -jumpHeight; // JUMP HEIGHT (change jumpHeight variable in Create event)
-	};
-};
-// else
-// {
-	// sprite_index = {jumping sprite}
-// }
-
-
-// set direction of sprite
-if (_x_direction != 0) 
-{
-	image_xscale = _x_direction;
-};
-
-if _x_direction != 0
-{
-	if lastPos != _x_direction
-	{
-		lastPos = _x_direction;
+		lastPos = _h_move;
 		accelFinal = 0;
 	};
 	
 	if accelFinal <= accelMax
 	{
-		accelFinal += accel;
+		accelFinal += accel * delta;
 	};
 }
 else
 {
-	if accelFinal > 0
+	if accelFinal > accel * delta
 	{
-		accelFinal -= accel;
+		accelFinal -= accel * delta;
 	};
 };
 
-if accelFinal < accel
+if accelFinal < accel * delta
 {
 	accelFinal = 0;
 	lastPos = 0;
 };
 
-xSpeed = (accelFinal * lastPos);
+hsp = (accelFinal * lastPos) * delta;
 
-// update postion
-x += xSpeed;
-y += ySpeed;
+// correct sprite direction
+if _h_move != 0
+{
+	image_xscale = _h_move;
+};
+
+// calculate gravity, collision & jump
+var _coll = place_meeting(x, y + 1, oWall);
+
+vsp += grv;
+
+if (_coll)
+{
+	// if moving, use running sprite, else use idle sprite
+	
+	if (_jump)
+	{
+		vsp = -jmp;
+	};
+}; // if not on ground, use jumping sprite
+
+if place_meeting(x + hsp, y, oWall)
+{
+	hsp = 0;
+};
+
+if place_meeting(x, y + (vsp * delta), oWall)
+{
+	vsp = 0;
+};
+
+x += hsp;
+y += vsp * delta;

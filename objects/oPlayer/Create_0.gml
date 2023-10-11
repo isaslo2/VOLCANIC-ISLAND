@@ -1,13 +1,8 @@
-// thanks to Fisk MacTaggert for some of the acceleration code
-accel = 2;
+accel = 0.8; // accel/deccel rate
 accelFinal = 0;
-accelMax = 8; // max speed
+accelMax = 12; // maximum speed
 lastPos = 0;
-
-// thanks to Blobfish for some of the movement code
-// if your gonna change any values, ONLY change them here. They will take effect throughout all of the code.
-// no longer needed // spd = 8;
-xSpeed = 0;
-ySpeed = 0;
-jumpHeight = 6;
-grav = 30;
+hsp = 0;
+vsp = 0;
+jmp = 25; // jump height
+grv = 0.1; // gravity strength
