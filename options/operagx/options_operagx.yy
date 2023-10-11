@@ -17,11 +17,11 @@
   "option_operagx_mod_team_id": "",
   "option_operagx_mod_team_name": "",
   "option_operagx_mod_version": "1.0.0.0",
-  "option_operagx_next_version": "1.0.0.2",
+  "option_operagx_next_version": "1.0.0.3",
   "option_operagx_publicShareUrl": "",
   "option_operagx_scale": 0,
   "option_operagx_team_id": "1084fce3-35ea-4edc-a8bd-9e53b626e0f4",
   "option_operagx_team_name": "nebula49 studio",
   "option_operagx_texture_page": "2048x2048",
-  "option_operagx_version": "1.0.0.1",
+  "option_operagx_version": "1.0.0.2",
 }

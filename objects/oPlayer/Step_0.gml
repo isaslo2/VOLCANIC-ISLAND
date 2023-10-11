@@ -53,6 +53,14 @@ vsp += grv;
 if (_coll)
 {
 	// if moving, use running sprite, else use idle sprite
+	if _h_move != 0
+	{
+		sprite_index = sJoshRun;
+	}
+	else
+	{
+		sprite_index = sJoshIdle
+	};
 	
 	if (_jump)
 	{
