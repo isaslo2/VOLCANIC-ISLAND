@@ -7,7 +7,7 @@
   "option_operagx_game_name": "VOLCANIC ISLAND prototype",
   "option_operagx_guid": "0f46aa5d-c19a-4b53-b10d-af3f065bc797",
   "option_operagx_internalShareUrl": "https://gx.games/games/frg6c5/volcanic-island-prototype/tracks/1c8c7426-07c9-4869-8405-751de6396e9b/",
-  "option_operagx_interpolate_pixels": true,
+  "option_operagx_interpolate_pixels": false,
   "option_operagx_mod_editUrl": "",
   "option_operagx_mod_game_name": "VOLCANIC ISLAND",
   "option_operagx_mod_guid": "",
