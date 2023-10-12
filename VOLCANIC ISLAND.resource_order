@@ -20,7 +20,7 @@
     {"name":"oWall","order":1,"path":"objects/oWall/oWall.yy",},
     {"name":"oHazard","order":3,"path":"objects/oHazard/oHazard.yy",},
     {"name":"oManager","order":2,"path":"objects/oManager/oManager.yy",},
-    {"name":"oCamera","order":4,"path":"objects/oCamera/oCamera.yy",},
+    {"name":"Object6","order":5,"path":"objects/Object6/Object6.yy",},
     {"name":"sHazard","order":2,"path":"sprites/sHazard/sHazard.yy",},
     {"name":"sWall","order":1,"path":"sprites/sWall/sWall.yy",},
     {"name":"sJoshIdle","order":1,"path":"sprites/sJoshIdle/sJoshIdle.yy",},

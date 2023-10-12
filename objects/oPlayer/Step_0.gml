@@ -1,5 +1,5 @@
 // controls
-keyUp = keyboard_check(ord("W"));
+keyUp = keyboard_check_pressed(ord("W"));
 keyDown = keyboard_check(ord("S"));
 keyRight = keyboard_check(ord("D"));
 keyLeft = keyboard_check(ord("A"));
